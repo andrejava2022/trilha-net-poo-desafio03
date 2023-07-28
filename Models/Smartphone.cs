@@ -1,26 +1,12 @@
-namespace DesafioPOO.Models
-{
-    public abstract class Smartphone
-    {
-        public string Numero { get; set; }
-        // TODO: Implementar as propriedades faltantes de acordo com o diagrama
+using DesafioPOO.Models;
 
-        public Smartphone(string numero)
-        {
-            Numero = numero;
-            // TODO: Passar os parâmetros do construtor para as propriedades
-        }
+Smartphone nokia = new Nokia("551156779338", "C1", "12345678910", 64 );
+Smartphone iphone = new Iphone("551155649338", "I12", "5698778910", 512 );
 
-        public void Ligar()
-        {
-            Console.WriteLine("Ligando...");
-        }
+nokia.Ligar();
+nokia.ReceberLigacao();
+nokia.InstalarAplicativo("DIO");
 
-        public void ReceberLigacao()
-        {
-            Console.WriteLine("Recebendo ligação...");
-        }
-
-        public abstract void InstalarAplicativo(string nomeApp);
-    }
-}
+iphone.Ligar();
+iphone.ReceberLigacao();
+iphone.InstalarAplicativo("DIO");
